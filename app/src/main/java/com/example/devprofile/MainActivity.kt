@@ -2,22 +2,45 @@ package com.example.devprofile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import com.example.devprofile.databinding.ActivityMainBinding
+import androidx.lifecycle.ViewModelProvider
+//import com.example.devprofile.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+
+
+    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView( R.layout.activity_main);
 
-        Log.d("Main", "onCreate: ")
-        lifecycle.addObserver((Observer()))
+        mainViewModel = ViewModelProvider(this, MainViewModelFactory(5))
+            .get(MainViewModel::class.java)
+
+        setText()
+
+        button.setOnClickListener {
+            incrementc()
+
+        }
+
+
 
 
     }
+
+    private fun incrementc() {
+        mainViewModel.incrementcount()
+        setText()
+    }
+
+    private fun setText() {
+      tvtest.text=mainViewModel.count.toString()
+    }
+
+
 
 
 }
