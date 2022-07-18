@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiUtilities {
 
-    private val BASE_URL ="https://api.github.com/"
+    val BASE_URL="https://api.imgflip.com/"
 
     fun getInstance(): Retrofit{
         return Retrofit.Builder()
