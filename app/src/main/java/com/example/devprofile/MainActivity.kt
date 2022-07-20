@@ -2,37 +2,42 @@ package com.example.devprofile
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.example.devprofile.api.ApiInterface
-import com.example.devprofile.api.ApiUtilities
-import com.example.devprofile.repository.MemesRepository
-import com.example.devprofile.viewmodel.MemesViewModel
-import com.example.devprofile.viewmodel.MemesViewModelFactory
+import com.example.devprofile.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
 
-    private lateinit var memesViewModel: MemesViewModel
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        binding= DataBindingUtil.setContentView(this,R.layout.activity_main)
+        val notesDao= NotesDatabase.getDatabase(applicationContext).notesDao()
+        val notesRepository=NotesRepository(notesDao)
+        val mainViewModel=ViewModelProvider(this,MainViewModelFactory(notesRepository)).get(MainViewModel::class.java)
 
-        val apiInterface = ApiUtilities.getInstance().create(ApiInterface::class.java)
-        val memesRepository = MemesRepository(apiInterface)
-
-        memesViewModel = ViewModelProvider(
-            this,
-            MemesViewModelFactory(memesRepository)
-        ).get(MemesViewModel::class.java)
-        memesViewModel.memes.observe(this, {
-            // Log.d("Shivi", "onCreate: ${it.toString()}")
-
-            it.data.memes.iterator().forEach {
-                Log.d("Shivi", "name: ${it.name}")
-            }
+        mainViewModel.getNotes().observe(this,{
+            binding.tvTextView.text=it.toString()
         })
+
+        binding.btButton.setOnClickListener{
+            if(binding.tvTextEt.text!!.isEmpty()){
+                binding.tvTextEt.error="Empty"
+            }
+            else{
+                mainViewModel.insertNotes(Notes(0,binding.tvTextEt.text.toString()))
+                Toast.makeText(this,"Done",Toast.LENGTH_SHORT).show()
+                binding.tvTextEt.text=null
+            }
+        }
+
+
+
 
     }
 }
