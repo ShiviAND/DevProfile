@@ -1,24 +1,21 @@
 package com.example.devprofile
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
-import com.example.devprofile.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_second.*
 
-class MainActivity : AppCompatActivity() {
-    val TAG="Testing"
+class SecondActivity : AppCompatActivity() {
+
+    val TAG="Testing Sec"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.d(TAG, "onCreate:")
-        bt_button.setOnClickListener {
-           val intent= Intent(this, SecondActivity::class.java)
+        setContentView(R.layout.activity_second)
+        Log.d(TAG, "onCreate: ")
+        button.setOnClickListener {
+            val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -53,5 +50,3 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onRestart: ")
     }
 }
-
-
