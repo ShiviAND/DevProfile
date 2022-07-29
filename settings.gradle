@@ -16,3 +16,4 @@ rootProject.name = "DevProfile"
 include ':app'
 include ':fragtest'
 include ':broadcastreceiver'
+include ':servicesinandroid'

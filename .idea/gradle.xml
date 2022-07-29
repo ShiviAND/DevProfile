@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/broadcastreceiver" />
             <option value="$PROJECT_DIR$/fragtest" />
+            <option value="$PROJECT_DIR$/servicesinandroid" />
           </set>
         </option>
       </GradleProjectSettings>
