@@ -5,6 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_test.xml" value="0.1515625" />
+        <entry key="contentprovider/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="contentprovider/src/main/res/layout/view_holder_main.xml" value="0.22780797101449277" />
+        <entry key="customview/src/main/res/layout/my_custom_view_layout.xml" value="0.240625" />
+        <entry key="customview2/src/main/res/layout/activity_main.xml" value="0.24166666666666667" />
+        <entry key="customview2/src/main/res/layout/layout_custom_imageview.xml" value="0.240625" />
         <entry key="fragtest/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="fragtest/src/main/res/layout/fragment_black.xml" value="0.24166666666666667" />
         <entry key="fragtest/src/main/res/layout/fragment_blue.xml" value="0.22760416666666666" />
