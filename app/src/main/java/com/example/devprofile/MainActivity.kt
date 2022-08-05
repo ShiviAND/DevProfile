@@ -2,6 +2,7 @@ package com.example.devprofile
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,9 +20,17 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate:")
         bt_button.setOnClickListener {
            val intent= Intent(this, SecondActivity::class.java)
+            
             startActivity(intent)
         }
+
+
+        startActivityForResult(intent,5)
     }
+
+
+
+
 
     override fun onStart() {
         super.onStart()
@@ -37,6 +46,15 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.d(TAG, "onPause: ")
     }
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        outState.putString("KEY","abc")
+    }
+
+
+
+
 
     override fun onStop() {
         super.onStop()
