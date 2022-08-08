@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
             val fragment:Fragment?=
             supportFragmentManager.findFragmentByTag(FragmentTest::class.java.simpleName)
 
+            myFragment.arguments
+
             if(fragment !is FragmentTest){
                supportFragmentManager.beginTransaction().add(R.id.fragment_main,myFragment,FragmentTest::class.java.simpleName)
                    .commit()
