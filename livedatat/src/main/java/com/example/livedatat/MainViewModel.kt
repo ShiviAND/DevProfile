@@ -8,7 +8,7 @@ class MainViewModel:ViewModel() {
 
     private val livetext= MutableLiveData<String>("initial value")
 
-     val livetextfetcher: LiveData<String>
+     val livetextfetcher: MutableLiveData<String>
          get() =livetext
 
     fun setText(){

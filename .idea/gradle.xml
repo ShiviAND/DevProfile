@@ -11,15 +11,20 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bindingadapter" />
             <option value="$PROJECT_DIR$/broadcastreceiver" />
             <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/customview2" />
             <option value="$PROJECT_DIR$/fragtest" />
             <option value="$PROJECT_DIR$/livedatat" />
+            <option value="$PROJECT_DIR$/mvvmchc" />
             <option value="$PROJECT_DIR$/passdataatof" />
             <option value="$PROJECT_DIR$/quotify" />
+            <option value="$PROJECT_DIR$/retrocheezy" />
+            <option value="$PROJECT_DIR$/retrofitcallback" />
             <option value="$PROJECT_DIR$/servicesinandroid" />
+            <option value="$PROJECT_DIR$/viewbindingt" />
             <option value="$PROJECT_DIR$/viewmodelchc" />
           </set>
         </option>

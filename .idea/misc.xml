@@ -5,8 +5,10 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_test.xml" value="0.1515625" />
+        <entry key="bindingadapter/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="contentprovider/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="contentprovider/src/main/res/layout/view_holder_main.xml" value="0.22780797101449277" />
+        <entry key="customview/src/main/res/drawable/selection_button_background.xml" value="0.1655" />
         <entry key="customview/src/main/res/layout/my_custom_view_layout.xml" value="0.240625" />
         <entry key="customview2/src/main/res/layout/activity_main.xml" value="0.24166666666666667" />
         <entry key="customview2/src/main/res/layout/layout_custom_imageview.xml" value="0.240625" />
@@ -15,10 +17,12 @@
         <entry key="fragtest/src/main/res/layout/fragment_blue.xml" value="0.22760416666666666" />
         <entry key="fragtest/src/main/res/layout/fragment_green.xml" value="0.24166666666666667" />
         <entry key="fragtest/src/main/res/layout/fragment_red.xml" value="0.21839080459770116" />
-        <entry key="livedatat/src/main/res/layout/activity_main.xml" value="0.23233695652173914" />
+        <entry key="livedatat/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="mvvmchc/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="passdataatof/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="passdataatof/src/main/res/layout/activity_second.xml" value="0.2513586956521739" />
         <entry key="servicesinandroid/src/main/res/layout/activity_main.xml" value="0.24166666666666667" />
+        <entry key="viewbindingt/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="viewmodelchc/src/main/res/layout/activity_main.xml" value="0.22418478260869565" />
       </map>
     </option>
